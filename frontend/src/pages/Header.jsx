@@ -189,7 +189,7 @@ const Header = () => {
                  overflow-hidden hover:w-44"
             >
               <Mail className="w-7 h-7 flex-shrink-0" />
-              <span className="ml-3 hidden group-hover:inline-blockopacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+              <span className="ml-3 hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
                 Contact
               </span>
             </a>
