@@ -36,7 +36,7 @@ const services = [
 
 const Service = () => {
   return (
-    <section id="services" className="mt-16 pb-8 border-b">
+    <section id="services" className="pb-8">
       <div className="container mx-auto px-4">
         {/* Title row */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">

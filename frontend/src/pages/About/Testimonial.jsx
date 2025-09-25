@@ -30,7 +30,7 @@ const Testimonial = () => {
     setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
 
   return (
-    <section id="testimonials" className="mt-16 pb-12 border-b">
+    <section id="testimonials" className="pb-8">
       <div className="container mx-auto px-4">
         {/* Title row */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">

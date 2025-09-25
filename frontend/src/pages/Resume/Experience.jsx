@@ -1,4 +1,4 @@
-// Experience.jsx
+// Experience.jsx - Corrected with Tailwind
 import React from "react";
 
 const Experience = () => {
@@ -69,58 +69,62 @@ const Experience = () => {
   ];
 
   const ExperienceItem = ({ item, isLast }) => (
-    <li
-      className={`single-experience position-relative pl-35 ${
-        isLast ? "" : "mb-25"
-      }`}
-    >
-      <div className="d-flex justify-content-between align-items-start flex-column-reverse flex-md-row mb-20">
-        <div className="experience-info">
-          <h4 className="mb-12">{item.title || item.degree}</h4>
-          <span className="mb-12">
-            <span className="secondary-color pr-05 d-inline-block">
+    <li className={`relative pl-8 ${isLast ? "" : "mb-6"}`}>
+      <div className="flex flex-col md:flex-row justify-between items-start mb-5">
+        <div className="experience-info mb-4 md:mb-0">
+          <h4 className="mb-3 text-lg font-semibold">
+            {item.title || item.degree}
+          </h4>
+          <span className="text-gray-600">
+            <span className="text-blue-500 pr-1 inline-block">
               {item.company || item.institution}
             </span>{" "}
             ({item.period})
           </span>
         </div>
-        <img src={item.logo} alt={item.alt} className="d-inline-block" />
+        <img
+          src={item.logo}
+          alt={item.alt}
+          className="inline-block w-12 h-12"
+        />
       </div>
-      <p>{item.description}</p>
+      <p className="text-gray-600">{item.description}</p>
     </li>
   );
 
   const EducationItem = ({ item, isLast }) => (
-    <li
-      className={`single-experience position-relative pl-35 ${
-        isLast ? "" : "mb-25"
-      }`}
-    >
-      <div className="d-flex justify-content-between align-items-start flex-column-reverse flex-md-row mb-20">
-        <div className="experience-info">
-          <h4 className="mb-12">{item.degree}</h4>
-          <span className="secondary-color mb-12">
-            <span className="d-inline-block pr-05">{item.institution}</span> (
+    <li className={`relative pl-8 ${isLast ? "" : "mb-6"}`}>
+      <div className="flex flex-col md:flex-row justify-between items-start mb-5">
+        <div className="experience-info mb-4 md:mb-0">
+          <h4 className="mb-3 text-lg font-semibold">{item.degree}</h4>
+          <span className="text-blue-500">
+            <span className="inline-block pr-1">{item.institution}</span> (
             {item.period})
           </span>
         </div>
-        <img src={item.logo} alt={item.alt} className="d-inline-block" />
+        <img
+          src={item.logo}
+          alt={item.alt}
+          className="inline-block w-12 h-12"
+        />
       </div>
-      <p>{item.description}</p>
+      <p className="text-gray-600">{item.description}</p>
     </li>
   );
 
   return (
-    <div className="experience-education-content-area section-border-bottom pb-65">
-      <div className="row justify-content-between title-margin mb-45">
-        <div className="col-xl-6 col-lg-5 col-md-4 col-sm-12 col-12 d-flex align-items-center">
+    <div className="experience-education-content-area border-b border-gray-300 pb-16">
+      <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
+        <div className="lg:w-6/12 w-full flex items-center mb-4 lg:mb-0">
           <div className="title">
-            <h2 className="position-relative pl-25">Resume</h2>
+            <h2 className="relative pl-6 text-2xl font-bold before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:w-1 before:h-8 before:bg-blue-500">
+              Resume
+            </h2>
           </div>
         </div>
-        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-12 text-right">
-          <div className="title-content text-right">
-            <p className="text-left">
+        <div className="lg:w-6/12 w-full text-right">
+          <div className="title-content text-justify lg:text-right">
+            <p className="text-gray-600">
               Eva cididunt ut labor et dolor magna antiqua.Ut ad enum ad dolor
               sit education amat consenter adipisicing eliot antiqua.
             </p>
@@ -128,11 +132,11 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="row">
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* Work Experience Section */}
-        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-          <div className="experience-wrapper over-hidden pr-35">
-            <h3 className="mb-30">Work Experience</h3>
+        <div className="lg:w-6/12 w-full">
+          <div className="experience-wrapper pr-0 lg:pr-8">
+            <h3 className="mb-8 text-xl font-semibold">Work Experience</h3>
             <ul>
               {workExperience.map((item, index) => (
                 <ExperienceItem
@@ -146,9 +150,9 @@ const Experience = () => {
         </div>
 
         {/* Education Section */}
-        <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-          <div className="education-wrapper over-hidden pl-35">
-            <h3 className="mb-30">Education</h3>
+        <div className="lg:w-6/12 w-full">
+          <div className="education-wrapper pl-0 lg:pl-8">
+            <h3 className="mb-8 text-xl font-semibold">Education</h3>
             <ul>
               {education.map((item, index) => (
                 <EducationItem
