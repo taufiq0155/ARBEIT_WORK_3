@@ -1,4 +1,3 @@
-// Experience.jsx - Corrected with Tailwind
 import React from "react";
 
 const Experience = () => {
@@ -69,10 +68,10 @@ const Experience = () => {
   ];
 
   const ExperienceItem = ({ item, isLast }) => (
-    <li className={`relative pl-8 ${isLast ? "" : "mb-6"}`}>
-      <div className="flex flex-col md:flex-row justify-between items-start mb-5">
+    <li className={`relative pl-8 ${isLast ? "" : "mb-8"}`}>
+      <div className="flex flex-col md:flex-row justify-between items-start mb-4">
         <div className="experience-info mb-4 md:mb-0">
-          <h4 className="mb-3 text-lg font-semibold">
+          <h4 className="mb-2 text-lg font-semibold">
             {item.title || item.degree}
           </h4>
           <span className="text-gray-600">
@@ -93,10 +92,10 @@ const Experience = () => {
   );
 
   const EducationItem = ({ item, isLast }) => (
-    <li className={`relative pl-8 ${isLast ? "" : "mb-6"}`}>
-      <div className="flex flex-col md:flex-row justify-between items-start mb-5">
+    <li className={`relative pl-8 ${isLast ? "" : "mb-8"}`}>
+      <div className="flex flex-col md:flex-row justify-between items-start mb-4">
         <div className="experience-info mb-4 md:mb-0">
-          <h4 className="mb-3 text-lg font-semibold">{item.degree}</h4>
+          <h4 className="mb-2 text-lg font-semibold">{item.degree}</h4>
           <span className="text-blue-500">
             <span className="inline-block pr-1">{item.institution}</span> (
             {item.period})
@@ -113,7 +112,7 @@ const Experience = () => {
   );
 
   return (
-    <div className="experience-education-content-area border-b border-gray-300 pb-16">
+    <div className="experience-education-content-area">
       <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
         <div className="lg:w-6/12 w-full flex items-center mb-4 lg:mb-0">
           <div className="title">
@@ -122,7 +121,7 @@ const Experience = () => {
             </h2>
           </div>
         </div>
-        <div className="lg:w-6/12 w-full text-right">
+        <div className="lg:w-6/12 w-full">
           <div className="title-content text-justify lg:text-right">
             <p className="text-gray-600">
               Eva cididunt ut labor et dolor magna antiqua.Ut ad enum ad dolor
@@ -135,7 +134,7 @@ const Experience = () => {
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Work Experience Section */}
         <div className="lg:w-6/12 w-full">
-          <div className="experience-wrapper pr-0 lg:pr-8">
+          <div className="experience-wrapper">
             <h3 className="mb-8 text-xl font-semibold">Work Experience</h3>
             <ul>
               {workExperience.map((item, index) => (
@@ -151,7 +150,7 @@ const Experience = () => {
 
         {/* Education Section */}
         <div className="lg:w-6/12 w-full">
-          <div className="education-wrapper pl-0 lg:pl-8">
+          <div className="education-wrapper">
             <h3 className="mb-8 text-xl font-semibold">Education</h3>
             <ul>
               {education.map((item, index) => (

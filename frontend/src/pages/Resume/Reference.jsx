@@ -1,3 +1,5 @@
+import React from "react";
+
 const Reference = () => {
   const references = [
     {
@@ -47,19 +49,18 @@ const Reference = () => {
   ];
 
   return (
-    <div className="team-area mt-16">
-      {/* Title Section */}
-      <div className="flex flex-wrap justify-between items-center title-margin mb-12">
-        <div className="w-full lg:w-6/12 xl:w-6/12 pr-0 flex items-center mb-4 lg:mb-0">
+    <div className="references-area">
+      <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
+        <div className="lg:w-6/12 w-full flex items-center mb-4 lg:mb-0">
           <div className="title">
-            <h2 className="relative pl-6 text-2xl lg:text-3xl font-bold">
+            <h2 className="relative pl-6 text-2xl font-bold before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:w-1 before:h-8 before:bg-blue-500">
               References & Recognition
             </h2>
           </div>
         </div>
-        <div className="w-full lg:w-6/12 xl:w-6/12 text-right">
-          <div className="title-content text-right">
-            <p className="text-left text-gray-600">
+        <div className="lg:w-6/12 w-full">
+          <div className="title-content text-justify lg:text-right">
+            <p className="text-gray-600">
               Eva cididunt ut labore et dolor magna antiqua.Ut ad enum ad dolor
               sit amet consectetur adipisicing elit.
             </p>
@@ -67,40 +68,32 @@ const Reference = () => {
         </div>
       </div>
 
-      {/* References Grid */}
-      <div className="team-wrapper">
-        <div className="flex flex-wrap items-start border-t border-gray-200 pt-8 gap-y-8">
+      <div className="references-wrapper">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {references.map((reference) => (
-            <div
-              key={reference.id}
-              className="w-full sm:w-6/12 md:w-6/12 lg:w-3/12 px-4"
-            >
-              <div className="single-team relative group">
-                <div className="team-img overflow-hidden rounded-xl transition-all duration-500 relative">
-                  <img
-                    className="w-full z-10 group-hover:scale-110 transition-transform duration-500"
-                    src={reference.image}
-                    alt={reference.name}
-                  />
-                  <ul className="social-link text-center absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {reference.socialLinks.map((social, index) => (
-                      <li key={index} className="inline-block">
-                        <a
-                          className="text-center px-3 py-2 inline-block bg-white text-gray-700 rounded-full mx-1 transition-all duration-300 hover:bg-blue-500 hover:text-white"
-                          href={social.href}
-                        >
-                          <i className={social.icon}></i>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="team-content text-center mt-5">
-                  <h4 className="font-semibold text-lg mb-1">
-                    {reference.name}
-                  </h4>
-                  <span className="text-gray-600">{reference.company}</span>
-                </div>
+            <div key={reference.id} className="single-reference group">
+              <div className="reference-img overflow-hidden rounded-xl transition-all duration-500 relative">
+                <img
+                  className="w-full z-10 group-hover:scale-110 transition-transform duration-500"
+                  src={reference.image}
+                  alt={reference.name}
+                />
+                <ul className="social-link text-center absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {reference.socialLinks.map((social, index) => (
+                    <li key={index} className="inline-block">
+                      <a
+                        className="text-center px-3 py-2 inline-block bg-white text-gray-700 rounded-full mx-1 transition-all duration-300 hover:bg-blue-500 hover:text-white"
+                        href={social.href}
+                      >
+                        <i className={social.icon}></i>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="reference-content text-center mt-5">
+                <h4 className="font-semibold text-lg mb-1">{reference.name}</h4>
+                <span className="text-gray-600">{reference.company}</span>
               </div>
             </div>
           ))}

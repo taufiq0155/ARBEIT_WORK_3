@@ -14,8 +14,8 @@ const About = () => {
           <div className="bg-white rounded-xl shadow">
             {/* About Content */}
             <div className="p-8">
-              {/* Title */}
-              <div className="border-b pb-10 mb-10">
+              {/* Title - Removed border-bottom */}
+              <div className="pb-6 mb-6">
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
                   <h2 className="text-3xl font-bold relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:w-1 before:h-8 before:bg-indigo-600">
                     About Me
@@ -135,11 +135,30 @@ const About = () => {
               </div>
             </div>
 
-            {/* Components - Remove individual padding/margins */}
-            <Service />
-            <Testimonial />
-            <Price />
-            <Brand />
+            {/* Components with consistent spacing and separators */}
+            <div className="border-t border-gray-200">
+              <div className="p-8">
+                <Service />
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200">
+              <div className="p-8">
+                <Testimonial />
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200">
+              <div className="p-8">
+                <Price />
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200">
+              <div className="p-8">
+                <Brand />
+              </div>
+            </div>
           </div>
         </div>
       </section>

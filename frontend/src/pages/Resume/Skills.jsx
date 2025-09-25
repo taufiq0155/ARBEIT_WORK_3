@@ -1,12 +1,8 @@
-// Skills.jsx
 import { useEffect } from "react";
 
 const Skills = () => {
   useEffect(() => {
-    // Initialize knob functionality (you'll need to implement or use a library)
     const initializeKnobs = () => {
-      // This would typically initialize a knob library like jQuery Knob
-      // For now, we'll just log that knobs should be initialized
       console.log("Initialize knobs here with a library like jQuery Knob");
     };
 
@@ -54,9 +50,9 @@ const Skills = () => {
   ];
 
   const ProgressBar = ({ skill }) => (
-    <div className="single-skill mb-5">
+    <div className="single-skill mb-6">
       <div className="bar-title">
-        <h4 className="mb-3">{skill.name}</h4>
+        <h4 className="mb-3 font-medium">{skill.name}</h4>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div
@@ -113,9 +109,8 @@ const Skills = () => {
   );
 
   return (
-    <div className="skill-content-area border-b border-gray-200 mt-16 pb-9">
-      {/* Title Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-11">
+    <div className="skill-content-area">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
         <div className="lg:w-1/2 w-full flex items-center mb-4 lg:mb-0">
           <div className="title">
             <h2 className="relative pl-6 text-2xl font-bold before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:w-1 before:h-8 before:bg-green-500">
@@ -123,7 +118,7 @@ const Skills = () => {
             </h2>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full text-right">
+        <div className="lg:w-1/2 w-full">
           <div className="title-content text-justify lg:text-right">
             <p className="text-gray-600">
               Eva cididunt ut labore et dolor magna antiqua. Ut ad enum ad dolor
@@ -133,13 +128,12 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Skills Content */}
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Column */}
-        <div className="lg:w-1/2 w-full lg:pr-5">
+        <div className="lg:w-1/2 w-full">
           {/* AI Tools */}
-          <h3 className="mb-7 text-xl font-semibold">AI Tools</h3>
-          <div className="skill-bar-area pb-16">
+          <div className="skill-bar-area pb-8">
+            <h3 className="mb-6 text-xl font-semibold">AI Tools</h3>
             <div className="progess-wrapper">
               {skillCategories[0].skills.map((skill, index) => (
                 <ProgressBar key={index} skill={skill} />
@@ -149,8 +143,8 @@ const Skills = () => {
 
           {/* Language Skills */}
           <div className="skill-round-bar-area">
-            <h3 className="mb-8 text-xl font-semibold">Language Skills</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-2">
+            <h3 className="mb-6 text-xl font-semibold">Language Skills</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {circularSkills[0].skills.map((skill, index) => (
                 <div key={index} className="flex justify-center">
                   <CircularSkill skill={skill} />
@@ -161,11 +155,11 @@ const Skills = () => {
         </div>
 
         {/* Right Column */}
-        <div className="lg:w-1/2 w-full lg:pl-5 flex flex-col-reverse lg:flex-col">
+        <div className="lg:w-1/2 w-full">
           {/* Work Skills */}
-          <div className="skill-round-bar-area lg:mb-4">
-            <h3 className="mb-8 text-xl font-semibold">Work Skills</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-2">
+          <div className="skill-round-bar-area mb-8">
+            <h3 className="mb-6 text-xl font-semibold">Work Skills</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {circularSkills[1].skills.map((skill, index) => (
                 <div key={index} className="flex justify-center">
                   <CircularSkill skill={skill} />
@@ -175,8 +169,8 @@ const Skills = () => {
           </div>
 
           {/* Business Skills */}
-          <div className="skill-bar-area pb-12">
-            <h3 className="mb-7 mt-4 text-xl font-semibold">Business Skills</h3>
+          <div className="skill-bar-area">
+            <h3 className="mb-6 text-xl font-semibold">Business Skills</h3>
             <div className="progess-wrapper">
               {skillCategories[1].skills.map((skill, index) => (
                 <ProgressBar key={index} skill={skill} />

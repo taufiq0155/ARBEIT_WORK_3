@@ -1,4 +1,3 @@
-// Award.jsx
 import React from "react";
 
 const Award = () => {
@@ -45,17 +44,16 @@ const Award = () => {
   ];
 
   return (
-    <div className="awards-area border-b border-gray-300 mt-16 pb-6">
-      {/* Title Section */}
-      <div className="flex flex-col lg:flex-row justify-between mb-11">
+    <div className="awards-area">
+      <div className="flex flex-col lg:flex-row justify-between mb-12">
         <div className="lg:w-6/12 w-full flex items-center mb-4 lg:mb-0">
           <div className="title">
-            <h2 className="relative pl-6 before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:w-1 before:h-6 before:bg-blue-500">
+            <h2 className="relative pl-6 text-2xl font-bold before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:w-1 before:h-8 before:bg-blue-500">
               Awards & Achievements
             </h2>
           </div>
         </div>
-        <div className="lg:w-6/12 w-full text-right">
+        <div className="lg:w-6/12 w-full">
           <div className="title-content text-justify lg:text-right">
             <p className="text-gray-600">
               Eva cididunt ut labore et dolor magna antiqua.Ut ad enum ad dolor
@@ -65,14 +63,13 @@ const Award = () => {
         </div>
       </div>
 
-      {/* Awards List */}
       <div className="award-wrapper">
         {awards.map((award, index) => (
           <div
             key={award.id}
-            className={`flex flex-col lg:flex-row items-start border-t border-gray-300 pt-8 pb-1 ${
-              index === awards.length - 1 ? "border-b border-gray-300 pb-9" : ""
-            } ${index > 0 ? "pt-8" : ""}`}
+            className={`flex flex-col lg:flex-row items-start pt-8 pb-8 ${
+              index < awards.length - 1 ? "border-b border-gray-200" : ""
+            }`}
           >
             {/* Award Logo */}
             <div className="lg:w-2/12 w-full pr-2 mb-5 lg:mb-0">
@@ -90,7 +87,7 @@ const Award = () => {
             {/* Award Name and Year */}
             <div className="lg:w-3/12 w-full pr-0 mb-4 lg:mb-0">
               <div className="award-content">
-                <h4 className="mb-2 font-normal">{award.awardName}</h4>
+                <h4 className="mb-2 font-semibold">{award.awardName}</h4>
                 <span className="text-gray-600">{award.year}</span>
               </div>
             </div>
@@ -98,14 +95,14 @@ const Award = () => {
             {/* Organization and Location */}
             <div className="lg:w-3/12 w-full pr-0 mb-4 lg:mb-0">
               <div className="award-content">
-                <h4 className="mb-2 font-normal">{award.organization}</h4>
+                <h4 className="mb-2 font-semibold">{award.organization}</h4>
                 <span className="text-gray-600">{award.location}</span>
               </div>
             </div>
 
             {/* Description */}
             <div className="lg:w-4/12 w-full">
-              <div className="award-content -mt-2">
+              <div className="award-content">
                 <p className="text-gray-600">{award.description}</p>
               </div>
             </div>
