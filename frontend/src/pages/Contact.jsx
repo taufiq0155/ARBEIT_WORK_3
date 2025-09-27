@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Navigation from "../components/Navigation"; // ← ADDED IMPORT
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,6 +29,10 @@ const Contact = () => {
       {/* Contact Section */}
       <section id="contact" className="mt-16">
         <div className="container mx-auto px-4">
+          {/* Navigation Component - ADDED */}
+          <div className="relative mb-16">
+            <Navigation />
+          </div>
           <div className="bg-white rounded-xl shadow">
             {/* Contact Content */}
             <div className="p-8">
