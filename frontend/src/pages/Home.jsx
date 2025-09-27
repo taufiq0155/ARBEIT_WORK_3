@@ -9,8 +9,9 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Home = () => {
   const handleImageError = (e, fallbackType) => {
     if (fallbackType === "logo") {
       e.target.style.display = "none";
@@ -101,27 +102,27 @@ const Header = () => {
           {/* Social Media Links - Inside Card Bottom Right */}
           <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-10">
             <div className="flex space-x-6 text-gray-300 text-sm font-medium">
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="hover:text-white transition duration-300 flex items-center space-x-1"
               >
                 <Facebook className="w-4 h-4" />
                 <span className="hidden sm:inline">FACEBOOK</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="hover:text-white transition duration-300 flex items-center space-x-1"
               >
                 <Linkedin className="w-4 h-4" />
                 <span className="hidden sm:inline">LINKEDIN</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="#"
                 className="hover:text-white transition duration-300 flex items-center space-x-1"
               >
                 <Instagram className="w-4 h-4" />
                 <span className="hidden sm:inline">INSTAGRAM</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -130,8 +131,8 @@ const Header = () => {
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-30">
           <div className="flex space-x-4">
             {/* Home Icon */}
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="group flex items-center justify-center w-16 h-16 bg-green-500 rounded-full text-white 
                  hover:bg-green-600 transition-all duration-300 shadow-xl border-4 border-white 
                  overflow-hidden hover:w-40"
@@ -140,11 +141,11 @@ const Header = () => {
               <span className="ml-3 hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
                 Home
               </span>
-            </a>
+            </Link>
 
             {/* About Icon */}
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="group flex items-center justify-center w-16 h-16 bg-green-500 rounded-full text-white 
                  hover:bg-green-600 transition-all duration-300 shadow-xl border-4 border-white 
                  overflow-hidden hover:w-40"
@@ -153,11 +154,11 @@ const Header = () => {
               <span className="ml-3 hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
                 About
               </span>
-            </a>
+            </Link>
 
             {/* Resume Icon */}
-            <a
-              href="#resume"
+            <Link
+              to="/resume"
               className="group flex items-center justify-center w-16 h-16 bg-green-500 rounded-full text-white 
                  hover:bg-green-600 transition-all duration-300 shadow-xl border-4 border-white 
                  overflow-hidden hover:w-44"
@@ -166,11 +167,11 @@ const Header = () => {
               <span className="ml-3 hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
                 Resume
               </span>
-            </a>
+            </Link>
 
-            {/* Portfolio Icon */}
-            <a
-              href="#portfolio"
+            {/* Portfolio Icon - Since you don't have a Portfolio component, I'll comment this out*/}
+            <Link
+              to="/portfolio"
               className="group flex items-center justify-center w-16 h-16 bg-green-500 rounded-full text-white 
                  hover:bg-green-600 transition-all duration-300 shadow-xl border-4 border-white 
                  overflow-hidden hover:w-44"
@@ -179,11 +180,11 @@ const Header = () => {
               <span className="ml-3 hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
                 Portfolio
               </span>
-            </a>
+            </Link>
 
             {/* Contact Icon */}
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="group flex items-center justify-center w-16 h-16 bg-green-500 rounded-full text-white 
                  hover:bg-green-600 transition-all duration-300 shadow-xl border-4 border-white 
                  overflow-hidden hover:w-44"
@@ -192,7 +193,7 @@ const Header = () => {
               <span className="ml-3 hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
                 Contact
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -200,4 +201,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Home;

@@ -1,5 +1,5 @@
-// src/pages/About.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import Service from "./Service";
 import Testimonial from "./Testimonial";
 import Price from "./Price";
@@ -7,7 +7,7 @@ import Brand from "./Brand";
 
 const About = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gray-200 p-4 md:p-8">
       {/* About Section */}
       <section id="about" className="mt-16">
         <div className="container mx-auto px-4">
@@ -124,12 +124,12 @@ const About = () => {
 
                   {/* Contact Button */}
                   <div className="mt-8">
-                    <a
-                      href="#contact"
+                    <Link
+                      to="/contact"
                       className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md hover:shadow-lg"
                     >
                       Contact Me
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

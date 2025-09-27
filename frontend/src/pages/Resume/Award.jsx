@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Award = () => {
   const awards = [
@@ -74,13 +75,13 @@ const Award = () => {
             {/* Award Logo */}
             <div className="lg:w-2/12 w-full pr-2 mb-5 lg:mb-0">
               <div className="award-logo mt-1 mb-5">
-                <a href="#" className="block">
+                <Link to="#" className="block">
                   <img
                     src={award.logo}
                     alt={`award logo ${award.id}`}
                     className="max-w-full h-auto"
                   />
-                </a>
+                </Link>
               </div>
             </div>
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-200 p-4 md:p-8">
       {/* Contact Section */}
       <section id="contact" className="mt-16">
         <div className="container mx-auto px-4">
@@ -73,12 +74,12 @@ const Contact = () => {
                       <div>
                         <h4 className="font-bold mb-2">Phone</h4>
                         <p className="mb-0">
-                          <a
-                            href="tel:+1234567890"
+                          <Link
+                            to="tel:+1234567890"
                             className="text-gray-700 hover:text-indigo-600 transition-colors block"
                           >
                             +123 456 7890
-                          </a>
+                          </Link>
                         </p>
                       </div>
                     </div>
@@ -94,12 +95,12 @@ const Contact = () => {
                       <div>
                         <h4 className="font-bold mb-2">Email</h4>
                         <p className="mb-0">
-                          <a
-                            href="mailto:Hello@persia.com"
+                          <Link
+                            to="mailto:Hello@persia.com"
                             className="text-gray-700 hover:text-indigo-600 transition-colors block"
                           >
                             Hello@persia.com
-                          </a>
+                          </Link>
                         </p>
                       </div>
                     </div>
@@ -203,7 +204,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

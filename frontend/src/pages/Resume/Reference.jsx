@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Reference = () => {
   const references = [
@@ -81,12 +82,12 @@ const Reference = () => {
                 <ul className="social-link text-center absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {reference.socialLinks.map((social, index) => (
                     <li key={index} className="inline-block">
-                      <a
+                      <Link
                         className="text-center px-3 py-2 inline-block bg-white text-gray-700 rounded-full mx-1 transition-all duration-300 hover:bg-blue-500 hover:text-white"
-                        href={social.href}
+                        to={social.href}
                       >
                         <i className={social.icon}></i>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
