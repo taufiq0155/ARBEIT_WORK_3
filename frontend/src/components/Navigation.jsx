@@ -81,6 +81,21 @@ const Navigation = () => {
           </Link>
         )}
 
+         {/* Blog Icon - Hide on blog page */}
+         {!hideCurrentPageIcon("/blog") && (
+          <Link
+            to="/blog"
+            className="group flex items-center justify-center w-16 h-16 bg-green-500 rounded-full text-white 
+                 hover:bg-green-600 transition-all duration-300 shadow-xl border-4 border-white 
+                 overflow-hidden hover:w-44"
+          >
+            <Edit3 className="w-7 h-7 flex-shrink-0" />
+            <span className="ml-3 hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+           Blog
+            </span>
+          </Link>
+        )}
+
         {/* Contact Icon - Hide on Contact page */}
         {!hideCurrentPageIcon("/contact") && (
           <Link
